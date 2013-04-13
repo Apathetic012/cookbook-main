@@ -19,5 +19,5 @@ bash "install_distribute" do
   code <<-EOH
     python distribute_setup.py
   EOH
-  not_if ::File.exists?("#{Chef::Config[:file_cache_path]}/distribute_setup.py")
+  not_if do ::File.exists?("#{Chef::Config[:file_cache_path]}/distribute_setup.py") end
 end
