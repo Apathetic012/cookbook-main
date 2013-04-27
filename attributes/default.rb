@@ -10,3 +10,4 @@ default['vagrant-main']['php_ini_locations'] = [
   '/etc/php5/fpm/php.ini', '/etc/php5/cli/php.ini'
 ]
 default['vagrant-main']['phpunit_executable_path'] = '/usr/local/bin/phpunit'
+default['vagrant-main']['composer_executable_path'] = '/usr/local/bin/composer'
