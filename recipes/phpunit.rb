@@ -1,4 +1,5 @@
 phpunit_location = "#{Chef::Config[:file_cache_path]}/phpunit.phar"
+phpunit_executable_path = node['vagrant-main']['phpunit_executable_path']
 
 remote_file phpunit_location do
   source 'http://pear.phpunit.de/get/phpunit.phar'
@@ -8,7 +9,6 @@ remote_file phpunit_location do
 end
 
 bash 'install_phpunit' do
-  cwd Chef::Config[:file_cache_path]
   code <<-EOH
     ln -s #{phpunit_location} #{phpunit_executable_path}
   EOH
