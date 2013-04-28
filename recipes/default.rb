@@ -1,6 +1,7 @@
 include_recipe "vagrant_main::npm_packages"
 include_recipe "vagrant_main::apt_packages"
 include_recipe "vagrant_main::php"
+include_recipe "vagrant_main::composer"
 include_recipe "vagrant_main::phpunit"
 include_recipe "vagrant_main::distribute"
 include_recipe "vagrant_main::ruby_gems"
