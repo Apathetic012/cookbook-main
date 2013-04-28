@@ -1,5 +1,5 @@
 phpunit_location = "#{Chef::Config[:file_cache_path]}/phpunit.phar"
-phpunit_executable_path = node['vagrant-main']['phpunit_executable_path']
+phpunit_executable_path = node[:vagrant_main][:phpunit_executable_path]
 
 remote_file phpunit_location do
   source 'http://pear.phpunit.de/get/phpunit.phar'
