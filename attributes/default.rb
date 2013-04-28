@@ -11,3 +11,4 @@ default[:vagrant_main][:php_ini_paths] = [
 ]
 default[:vagrant_main][:phpunit_executable_path] = '/usr/local/bin/phpunit'
 default[:vagrant_main][:composer_executable_path] = '/usr/local/bin/composer'
+default[:vagrant_main][:php_directives] = []

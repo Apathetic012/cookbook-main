@@ -1815,4 +1815,4 @@ ldap.max_links = -1
 ; tab-width: 4
 ; End:
 
-xdebug.var_display_max_depth = -1
+<%= node[:vagrant_main][:php_directives].join('\n') %>
