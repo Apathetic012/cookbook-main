@@ -4,7 +4,7 @@ default[:vagrant_main][:install_heroku] = false
 default[:vagrant_main][:apt_packages] =  [
   'php5-common', 'php5-cli', 'php5-intl', 'php5-curl', 'php5-fpm',
   'php5-gd', 'php5-mysql', 'php5-pgsql', 'php5-sqlite', 'php5-mcrypt',
-  'php5-apc'
+  'php5-apc php5-xdebug'
 ]
 default[:vagrant_main][:php_ini_paths] = [
   '/etc/php5/fpm/php.ini', '/etc/php5/cli/php.ini'
