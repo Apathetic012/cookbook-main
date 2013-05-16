@@ -1,5 +1,5 @@
 default[:vagrant_main][:ruby_gems] = ['compass', 'bundler']
-default[:vagrant_main][:npm_packages] = ['foreman', 'grunt-cli']
+default[:vagrant_main][:npm_packages] = ['grunt-cli']
 default[:vagrant_main][:install_heroku] = false
 default[:vagrant_main][:apt_packages] =  [
   'php5-common', 'php5-cli', 'php5-intl', 'php5-curl', 'php5-fpm',
