@@ -1,5 +1,5 @@
-phpunit_location = "#{Chef::Config[:file_cache_path]}/phpunit.phar"
-phpunit_executable_path = node[:vagrant_main][:phpunit_executable_path]
+phpunit_location = "/opt/composer/phpunit.phar"
+directory "/opt/composer"
 
 remote_file phpunit_location do
   source 'http://pear.phpunit.de/get/phpunit.phar'
@@ -10,7 +10,7 @@ end
 
 bash 'install_phpunit' do
   code <<-EOH
-    ln -s #{phpunit_location} #{phpunit_executable_path}
+    ln -s #{phpunit_location} #{node[:vagrant_main][:phpunit_executable_path]}
   EOH
   action :nothing
 end

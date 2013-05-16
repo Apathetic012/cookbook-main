@@ -1,5 +1,5 @@
-composer_location = "#{Chef::Config[:file_cache_path]}/composer.phar"
-composer_executable_path = node[:vagrant_main][:composer_executable_path]
+composer_location = "/opt/composer/composer.phar"
+directory "/opt/composer"
 
 remote_file composer_location do
   source "https://getcomposer.org/composer.phar"
@@ -11,7 +11,7 @@ end
 
 bash 'install_composer' do
   code <<-EOH
-    ln -s #{composer_location} #{composer_executable_path}
+    ln -s #{composer_location} #{node[:vagrant_main][:composer_executable_path]}
   EOH
   action :nothing
 end
